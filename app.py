@@ -25,6 +25,7 @@ def main():
     st.sidebar.write('SnapRead is a web app that allows you to upload a PDF file and ask questions about it. You can use this service to shorten lengthy PDF documents into quickly readble texts. You can also ask questions about the PDF you uploaded and get answers from the app.')
     st.sidebar.write("")
     st.sidebar.write("&#9210; :red[ Please only upload PDFs with text. App will not be able to recognize text from images.]")
+    st.sidebar.write("&#9210; :red[ Please only upload PDFs with English text. No other language will be understood by the model.")
     st.sidebar.write("&#9210; :red[ Please do not upload PDFs with more than 50 pages. App will not be able to process it.]")
     st.sidebar.write("&#9210; :green[ Please note that app is running on OpenAI API's free tier. Maximum of 3 requests per minute is allowed. If you get an error, please wait a minute and try again.]")
     st.sidebar.write("")
@@ -54,7 +55,7 @@ def main():
 
 
     txt = ""
-    pdf = st.file_uploader('Upload a PDF file', type=['pdf'])
+    pdf = st.file_uploader('Upload a PDF file with text in English. PDFs that only contain images will not be recognized.', type=['pdf'])
     
     
     #geting content the pdf file from user
