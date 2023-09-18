@@ -21,6 +21,7 @@ def main():
     #this codechunk is used to add a sidebar of information to the user.
     st.header('SnapRead v0.1')
     st.sidebar.header(":blue[Welcome to SnapRead!]")
+    
     st.sidebar.write('SnapRead is a web app that allows you to upload a PDF file and ask questions about it. You can use this service to shorten lengthy PDF documents into quickly readble texts. You can also ask questions about the PDF you uploaded and get answers from the app.')
     st.sidebar.write("")
     st.sidebar.write("&#9210; :red[ Please only upload PDFs with text. App will not be able to recognize text from images.]")
@@ -77,8 +78,8 @@ def main():
         store_name = pdf.name[:-4]
         st.write("You entered file : " + store_name)
         
-        # this is just for fun
-        st.balloons()
+        
+        
 
         # checking whether the vector store file is already present on the disk or not.
         if os.path.exists(f"{store_name}.pkl"):
