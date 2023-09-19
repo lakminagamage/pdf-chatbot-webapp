@@ -13,4 +13,4 @@ To get started,
 6. Enjoy...
 
 
-Demo : https://pdfchat-by-luke.streamlit.app
+Demo : [https://pdfchat-by-luke.streamlit.app](https://chatpdf-by-luke.streamlit.app/)
