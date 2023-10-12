@@ -91,7 +91,7 @@ def main():
         else:
             # if no pickle file found, a new vector store is created and stored on the disk.
             embeddings = OpenAIEmbeddings()
-            st.write("Creating vector store using OpenAI api.")
+            st.write("Your request is being processed.")
             vs = FAISS.from_texts(chunks,embedding=embeddings)
             with open(f"{store_name}.pkl", "wb") as f:
                 pickle.dump(vs, f)
